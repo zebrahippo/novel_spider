@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 '''
-异步爬小说
+异步爬小说，程序爬取的目标网站新笔趣阁http://www.xbiquge.la/
 '''
 
 import time
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     novel = {}#存储小说内容的
     urls = []#存储小说章节序号和链接，保证小说写入文本按照章节顺序
 
-    src_url = 'http://www.xbiquge.la/0/951/'
+    src_url = 'http://www.xbiquge.la/0/951/'  #小说目录页面url
     target_req = request.Request(url = src_url,headers=headers)
     target_response = request.urlopen(target_req)
     target_html = target_response.read().decode('utf-8','ignore')  #编码一定不要搞错
